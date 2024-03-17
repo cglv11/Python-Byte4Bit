@@ -1,6 +1,7 @@
 from server.models.trip_models import TripsResponse
 from .graphql_service import execute_graphql_query
 
+
 async def get_trips(token: str):
     query = """
     query {

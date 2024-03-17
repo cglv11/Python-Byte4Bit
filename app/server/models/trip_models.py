@@ -2,6 +2,7 @@ from typing import List, Optional
 from pydantic import BaseModel
 from datetime import datetime
 
+
 class Driver(BaseModel):
     id: int
     firstName: str
@@ -14,6 +15,7 @@ class Driver(BaseModel):
     createdAt: datetime
     updatedAt: datetime
 
+
 class User(BaseModel):
     id: int
     firstName: str
@@ -25,6 +27,7 @@ class User(BaseModel):
     location: Optional[str]
     createdAt: datetime
     updatedAt: datetime
+
 
 class Trip(BaseModel):
     id: int
@@ -40,6 +43,7 @@ class Trip(BaseModel):
     updatedAt: datetime
     driver: Driver
     user: User
+
 
 class TripsResponse(BaseModel):
     count: int

@@ -1,6 +1,7 @@
 from server.models.driver_models import DriversResponse
 from .graphql_service import execute_graphql_query
 
+
 async def get_drivers(token: str):
     query = """
     query {

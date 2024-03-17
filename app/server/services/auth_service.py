@@ -19,15 +19,15 @@ async def authenticate_admin(email: str, password: str):
     """
     variables = {"email": email, "password": password}
     response = await execute_graphql_query(graphql_mutation, variables)
-    
+
     admin_data = response.get("data", {}).get("loginAdmin", {})
-    
+
     if not admin_data:
         return None
-    
+
     admin = Admin(**admin_data["admin"])
     token = admin_data["token"]
-    
+
     if admin and token:
         return admin, token
     else:
