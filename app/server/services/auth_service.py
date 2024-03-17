@@ -1,4 +1,4 @@
-from models.admin_models import Admin
+from server.models.admin_models import Admin
 from .graphql_service import execute_graphql_query
 
 

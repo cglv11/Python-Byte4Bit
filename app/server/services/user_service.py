@@ -1,4 +1,4 @@
-from models.user_models import UsersResponse
+from server.models.user_models import UsersResponse
 from .graphql_service import execute_graphql_query
 
 async def get_users(token: str):

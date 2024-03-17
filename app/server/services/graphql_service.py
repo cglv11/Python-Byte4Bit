@@ -1,11 +1,9 @@
-# services/graphql_client.py
-
 import httpx
 from fastapi import HTTPException
 
 async def execute_graphql_query(query: str, variables: dict = None, token: str = ""):
     print('this is token: ', token)
-    url = 'http://localhost:3000/transport-app'  # La URL de tu servidor GraphQL
+    url = 'http://localhost:3000/transport-app'
     headers = {
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {token}' if token else ""

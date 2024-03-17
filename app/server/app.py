@@ -1,8 +1,8 @@
 from fastapi import FastAPI 
-from routers.auth_router import auth_router
-from routers.user_router import user_router
-from routers.driver_router import driver_router
-from routers.trip_router import trip_router
+from server.routers.auth_router import auth_router
+from server.routers.user_router import user_router
+from server.routers.driver_router import driver_router
+from server.routers.trip_router import trip_router
 
 app = FastAPI()
 

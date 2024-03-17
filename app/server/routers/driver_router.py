@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordBearer
-from models.driver_models import DriversResponse
-from services.driver_service import get_driver, get_drivers
-from services.user_service import get_user, get_users
+from server.models.driver_models import DriversResponse
+from server.services.driver_service import get_driver, get_drivers
+from server.services.user_service import get_user, get_users
 
 driver_router = APIRouter()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/token")

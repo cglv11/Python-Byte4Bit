@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from models.token_models import Token
-from services.auth_service import authenticate_admin
+from server.models.token_models import Token
+from server.services.auth_service import authenticate_admin
 from passlib.context import CryptContext
 
 auth_router = APIRouter()
